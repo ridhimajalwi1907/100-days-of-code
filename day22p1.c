@@ -1,0 +1,37 @@
+/**
+ * 100 Days of Code - UPES
+ * Day 22: 31 August 2026
+ * Problem 1 (Q43 - Loops without Arrays/Strings)
+ * 
+ * Question:
+ * Write a program to check if a number is a strong number.
+ */
+#include <stdio.h>
+
+int main() {
+    int n, temp, digit, fact, sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    temp = n;
+
+    while (temp > 0) {
+        digit = temp % 10;
+        fact = 1;
+
+        for (int i = 1; i <= digit; i++) {
+            fact = fact * i;
+        }
+
+        sum = sum + fact;
+        temp = temp / 10;
+    }
+
+    if (sum == n)
+        printf("%d is a strong number", n);
+    else
+        printf("%d is not a strong number", n);
+
+    return 0;
+}
