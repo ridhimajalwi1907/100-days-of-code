@@ -1,0 +1,26 @@
+/**
+ * 100 Days of Code - UPES
+ * Day 44: 26 September 2026
+ * Problem 2 (Q88 - Strings)
+ * 
+ * Question:
+ * Replace spaces with hyphens in a string.
+ */
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    for (i = 0; str[i] != '\0'; i++) {
+        if (str[i] == ' ')
+            str[i] = '-';
+    }
+
+    printf("String after replacement: %s", str);
+
+    return 0;
+}
